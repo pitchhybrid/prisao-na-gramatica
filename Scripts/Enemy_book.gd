@@ -12,11 +12,11 @@ func _ready():
 	
 
 
-func _on_hitBox_body_entered(body):
+#func _on_hitBox_body_entered(body):
 	
-	var instance = item.instance()
-	get_parent().get_parent().add_child(instance)
-	instance.global_position = self.global_position
+	#var instance = item.instance()
+	#get_parent().get_parent().add_child(instance)
+	#instance.global_position = self.global_position
 	
-	queue_free()
+	#queue_free()
 	

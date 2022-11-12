@@ -1,0 +1,96 @@
+[gd_scene load_steps=9 format=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0313726, 0.0117647, 0.0117647, 0.635294 )
+
+[sub_resource type="Theme" id=8]
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.0352941, 0.137255, 0.72549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.776471, 0.0588235, 0.0588235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.176471, 0.686275, 0.0313726, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0862745, 0.231373, 0.862745, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.823529, 0.0627451, 0.0627451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.192157, 0.666667, 0.0431373, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="WindowDialog" type="WindowDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -148.0
+margin_top = -45.0
+margin_right = 143.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 24.5, 57 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="WindowDialog"]
+margin_top = 5.0
+margin_right = 288.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Qual Palavra Está Escrita Corretamente?"
+autowrap = true
+
+[node name="Label2" type="Label" parent="WindowDialog"]
+margin_left = 110.0
+margin_top = 29.0
+margin_right = 187.0
+margin_bottom = 45.0
+theme = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+text = "Comessar"
+
+[node name="Label3" type="Label" parent="WindowDialog"]
+margin_left = 110.0
+margin_top = 51.0
+margin_right = 187.0
+margin_bottom = 65.0
+custom_styles/normal = SubResource( 10 )
+text = "Avanssar"
+
+[node name="Label4" type="Label" parent="WindowDialog"]
+margin_left = 110.0
+margin_top = 72.0
+margin_right = 186.0
+margin_bottom = 89.0
+custom_styles/normal = SubResource( 11 )
+text = "Arremessar"
+
+[node name="Button" type="Button" parent="WindowDialog"]
+margin_left = 9.0
+margin_top = 98.0
+margin_right = 57.0
+margin_bottom = 118.0
+custom_styles/normal = SubResource( 5 )
+
+[node name="Button2" type="Button" parent="WindowDialog"]
+margin_left = 125.0
+margin_top = 97.0
+margin_right = 176.0
+margin_bottom = 117.0
+custom_styles/normal = SubResource( 6 )
+
+[node name="Button3" type="Button" parent="WindowDialog"]
+margin_left = 241.0
+margin_top = 96.0
+margin_right = 289.0
+margin_bottom = 116.0
+custom_styles/normal = SubResource( 7 )

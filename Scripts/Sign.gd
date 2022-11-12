@@ -14,3 +14,8 @@ func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		can_interact = true
 	
+
+
+func _on_Area2D_body_exited(body):
+	if body.name == "Player":
+		can_interact = false

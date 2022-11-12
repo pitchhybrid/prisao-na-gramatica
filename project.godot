@@ -30,6 +30,10 @@ config/name="Prisão da Gramática"
 run/main_scene="res://Scenes/level.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Scripts/Global.gd"
+
 [display]
 
 window/size/width=384
@@ -66,6 +70,14 @@ texture={
 "stream": false,
 "svg/scale": 1.0
 }
+
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="Itens"
+2d_physics/layer_3="Enemies"
+2d_physics/layer_4="Dialog"
+2d_physics/layer_5="Object"
 
 [physics]
 

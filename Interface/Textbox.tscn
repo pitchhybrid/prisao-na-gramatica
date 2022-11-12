@@ -1,0 +1,124 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Textbox.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0117647, 0.0117647, 0.0117647, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.976471, 0.968627, 0.968627, 1 )
+
+[node name="Textbox" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="TextboxContainer" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -191.0
+margin_top = -84.0
+margin_right = 193.0
+margin_bottom = -2.0
+
+[node name="Panel" type="Panel" parent="TextboxContainer"]
+margin_right = 384.0
+margin_bottom = 82.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer"]
+margin_right = 384.0
+margin_bottom = 82.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer"]
+visible = false
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 376.0
+margin_bottom = 74.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 376.0
+margin_bottom = 74.0
+
+[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+margin_right = 89.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Qual Palavra Está Escrita Corretamente:"
+autowrap = true
+clip_text = true
+
+[node name="Label2" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+margin_left = 93.0
+margin_right = 182.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "A) 
+AVANSAR"
+autowrap = true
+clip_text = true
+
+[node name="Label3" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+margin_left = 186.0
+margin_right = 275.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "B) 
+COMESSAR"
+autowrap = true
+clip_text = true
+
+[node name="Label4" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+margin_left = 279.0
+margin_right = 368.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "C)
+ARREMESSAR"
+autowrap = true
+clip_text = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="A_button" type="Button" parent="."]
+margin_left = 97.0
+margin_top = 81.0
+margin_right = 118.0
+margin_bottom = 101.0
+action_mode = 0
+text = "A"
+
+[node name="B_button" type="Button" parent="."]
+margin_left = 190.0
+margin_top = 80.0
+margin_right = 211.0
+margin_bottom = 100.0
+text = "B"
+
+[node name="C_button" type="Button" parent="."]
+margin_left = 283.0
+margin_top = 80.0
+margin_right = 304.0
+margin_bottom = 100.0
+text = "C"
+
+[node name="Win" type="Popup" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Loose" type="Popup" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
