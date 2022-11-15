@@ -27,12 +27,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Prisão da Gramática"
-run/main_scene="res://Scenes/level.tscn"
+run/main_scene="res://Scenes/TelaInicial.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Global="*res://Scripts/Global.gd"
+Serial="*res://Serial.gd"
+Scene="*res://Scene.gd"
 
 [display]
 
