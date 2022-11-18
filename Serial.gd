@@ -40,7 +40,7 @@ func close():
 func _process(delta):
 	if is_port_open:
 		var t = serial_port.read_text()
-		
+		print(t)
 		if t.length() > 0:
 			for c in t:
 				if c == "\n":
@@ -79,13 +79,4 @@ func emulate(command):
 	a.action = command
 	a.pressed = true
 	Input.parse_input_event(a)
-
-
-	print(command)
-	if command == 'ui_left' or command == 'ui_right':
-		emit_signal("joystick",command)
-	if command == 'tiro':
-		emit_signal("ataca",command)
-	if command == 'jump':
-		emit_signal("pula",command)
 	
