@@ -238,5 +238,3 @@ anims/run = SubResource( 5 )
 
 [connection signal="body_entered" from="." to="." method="_on_Enemy_1_body_entered"]
 [connection signal="correct_answer" from="QuestionBox" to="." method="_on_QuestionBox_correct_answer"]
-
-[editable path="QuestionBox"]
