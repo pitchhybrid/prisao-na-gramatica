@@ -9,6 +9,7 @@ export (String) var question
 export (String) var blue_text
 export (String) var yellow_text
 export (String) var green_text
+export (String) var correct
 
 var dialog: bool = true
 var can_interact1: bool = false
@@ -28,6 +29,7 @@ func _ready():
 	blue_button.text = blue_text
 	yellow_button.text = yellow_text
 	green_button.text = green_text
+	$QuestionBox.correct = correct
 	
 	
 func _on_QuestionBox_correct_answer():

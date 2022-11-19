@@ -27,6 +27,3 @@ func _on_Green_button_pressed():
 		emit_signal("correct_answer")
 		get_tree().paused = false
 		queue_free()
-
-
-
