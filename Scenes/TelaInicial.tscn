@@ -2,7 +2,7 @@
 
 [ext_resource path="res://mystic_woods_free_v0.2/StaySmile Font.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://mystic_woods_free_v0.2/2022-11-14-23-34-30.ogv" type="VideoStream" id=2]
-[ext_resource path="res://Scenes/TelaInicial.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/TelaInicial.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 39

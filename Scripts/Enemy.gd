@@ -1,6 +1,4 @@
-extends KinematicBody2D
-
-
+extends Area2D
 
 onready var blue_button = $QuestionBox/QuestionContainer/PanelContainer/MarginContainer/Rows/Blue_button
 onready var yellow_button = $QuestionBox/QuestionContainer/PanelContainer/MarginContainer/Rows/Yellow_button
@@ -32,12 +30,10 @@ func _ready():
 	green_button.text = green_text
 	
 	
-func _on_Area2D_body_entered(body):
-	if body.name == "Player":
-		can_interact1 = true
-
-
 func _on_QuestionBox_correct_answer():
 	$Animation.play("hit")
 	Global.add_enemy(1)
-	
+
+func _on_Enemy_1_body_entered(body):
+	if body.name == "Player":
+		can_interact1 = true
