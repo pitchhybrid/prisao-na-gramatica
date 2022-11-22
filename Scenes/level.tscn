@@ -97,11 +97,12 @@ position = Vector2( 237, -75 )
 [node name="Tree_large9" parent="Terrain" instance=ExtResource( 13 )]
 position = Vector2( 305, -75 )
 
-[node name="Tree_large14" parent="Terrain" instance=ExtResource( 13 )]
-position = Vector2( 304, -112 )
-
 [node name="Tree_large13" parent="Terrain" instance=ExtResource( 13 )]
 position = Vector2( 239, -113 )
+z_index = 1
+
+[node name="Tree_large14" parent="Terrain" instance=ExtResource( 13 )]
+position = Vector2( 304, -112 )
 
 [node name="YSort" type="YSort" parent="."]
 
