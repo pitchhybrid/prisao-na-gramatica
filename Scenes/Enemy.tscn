@@ -1,11 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://mystic_woods_free_v0.2/sprites/characters/slime.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=2]
 [ext_resource path="res://Interface/QuestionBox.tscn" type="PackedScene" id=3]
-
-[sub_resource type="CircleShape2D" id=6]
-radius = 12.0
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -209,7 +206,13 @@ tracks/2/keys = {
 "values": [ 7, 7, 8, 9, 10, 11, 12 ]
 }
 
-[node name="Enemy_1" type="Area2D"]
+[sub_resource type="CircleShape2D" id=7]
+radius = 84.006
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 12.0
+
+[node name="Enemy_1" type="KinematicBody2D"]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource( 2 )
@@ -217,10 +220,7 @@ question = "Qual Palavra Está Escrita Corretamente?"
 blue_text = "Cabeçalho"
 yellow_text = "Cabessalho"
 green_text = "Cabeçário"
-
-[node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 3 )
-shape = SubResource( 6 )
+correct = "blue"
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -236,5 +236,18 @@ anims/run = SubResource( 5 )
 
 [node name="QuestionBox" parent="." instance=ExtResource( 3 )]
 
-[connection signal="body_entered" from="." to="." method="_on_Enemy_1_body_entered"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 7 )
+
+[node name="Dialog" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="Dialog"]
+position = Vector2( 0, 3 )
+shape = SubResource( 6 )
+
 [connection signal="correct_answer" from="QuestionBox" to="." method="_on_QuestionBox_correct_answer"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Dialog" to="." method="_on_Dialog_body_entered"]
