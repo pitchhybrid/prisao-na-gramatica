@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/DesertTilemap16x16.png-133ede37474a952df02bacd84e7cf2fe.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://mystic_woods_free_v0.2/DesertTileset16x16/Tileset16x16/DesertTilemap16x16.png"
+dest_files=[ "res://.import/DesertTilemap16x16.png-133ede37474a952df02bacd84e7cf2fe.stex" ]
+
+[params]
+
+compress/mode=3
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=1
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
