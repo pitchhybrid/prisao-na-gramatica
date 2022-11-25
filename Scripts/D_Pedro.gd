@@ -8,10 +8,10 @@ var can_interact1: bool = false
 	
 	
 func _physics_process(_delta):
-	if Input.is_action_just_pressed("ui_accept") and can_interact1 and Global.enemies < 4:
+	if Input.is_action_just_pressed("ui_accept") and can_interact1 and Global.enemies < 5:
 		can_interact1 = false
 		get_tree().call_group("npc","spawn_dialog", dialog_text)
-	elif Input.is_action_just_pressed("ui_accept") and can_interact1 and Global.enemies == 4:
+	elif Input.is_action_just_pressed("ui_accept") and can_interact1 and Global.enemies == 5:
 		can_interact1 = false
 		get_tree().call_group("npc","spawn_dialog", question_text)
 		$CanvasLayer.show()

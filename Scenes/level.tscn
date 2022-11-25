@@ -126,10 +126,22 @@ position = Vector2( -89, 24 )
 [node name="bau2" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 688, 251 )
 
+[node name="Enemy_2" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 434, 433 )
+question = "Qual porque é usado em respostas?"
+blue_text = "Por que"
+yellow_text = "Porque"
+green_text = "Por quê"
+correct = "yellow"
+
 [node name="Enemy_5" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( -50, 309 )
 collision_layer = 16
-correct = "yellow"
+question = "A palavra \"através\" tem como sílaba tônica: "
+blue_text = "\"a\""
+yellow_text = "\"tra\""
+green_text = "\"vés\""
+correct = "green"
 
 [node name="Enemy_4" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( -87, 81 )
@@ -138,9 +150,93 @@ collision_layer = 16
 [node name="Enemy_3" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 657, 267 )
 collision_layer = 16
+question = "A palavra paroxítona “água” é acentuada porque:"
+blue_text = "Termina em \"a\""
+yellow_text = "Termina em vogal"
+green_text = "Termina em ditongo"
+correct = "green"
 
 [node name="Enemy_1" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 253, 110 )
 collision_layer = 16
+question = "As palavras: Galápagos, Quilômetros e América são:"
+blue_text = "Proparoxítonas"
+yellow_text = "Paroxítonas"
+green_text = "Oxítonas"
+
+[node name="Tree_medium2" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( -91, 426 )
+
+[node name="Tree_large12" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 372, 214 )
+
+[node name="Tree_medium" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 520, 337 )
+
+[node name="Tree_trunk" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 284, 203 )
+
+[node name="Tree_trunk5" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 166, 423 )
+
+[node name="Tree_trunk4" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 441, 127 )
+
+[node name="Tree_trunk2" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 90, 255 )
+
+[node name="Tree_trunk3" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 156, 78 )
+
+[node name="Door" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 274, -28 )
+
+[node name="Tree_large2" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 201, 291 )
+
+[node name="Tree_small" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 109, 338 )
+
+[node name="Tree_small3" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 490, 187 )
+
+[node name="Tree_small2" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( -49, 258 )
+
+[node name="Tree_large11" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 656, 336 )
+
+[node name="Tree_large10" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 329, 392 )
+
+[node name="Tree_large" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 64, 97 )
+
+[node name="Tree_large4" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 24, 338 )
+
+[node name="Tree_large3" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 448, 40 )
+
+[node name="Tree_large5" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 701, 55 )
+
+[node name="Tree_large6" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 306, -41 )
+
+[node name="Tree_large7" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 237, -41 )
+
+[node name="Tree_large8" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 237, -75 )
+
+[node name="Tree_large9" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 305, -75 )
+
+[node name="Tree_large14" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 304, -112 )
+
+[node name="Tree_large13" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 239, -113 )
 
 [node name="Interface" parent="." instance=ExtResource( 8 )]
