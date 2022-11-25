@@ -26,12 +26,16 @@ custom_styles/panel = SubResource( 1 )
 [node name="QuestionContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = 1.0
+margin_right = 382.0
+margin_bottom = 191.0
+rect_scale = Vector2( 0.5, 0.5 )
 
 [node name="PanelContainer" type="PanelContainer" parent="QuestionContainer"]
-margin_left = 189.0
-margin_top = 93.0
-margin_right = 195.0
-margin_bottom = 99.0
+margin_left = 380.0
+margin_top = 188.0
+margin_right = 386.0
+margin_bottom = 194.0
 custom_styles/panel = SubResource( 2 )
 
 [node name="MarginContainer" type="MarginContainer" parent="QuestionContainer/PanelContainer"]
@@ -59,6 +63,8 @@ text = "Qual palavra está escrita corretamente?"
 margin_top = 18.0
 margin_right = 254.0
 margin_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
 custom_colors/font_color_disabled = Color( 0.0117647, 0.329412, 0.870588, 1 )
 custom_colors/font_color_focus = Color( 0.0117647, 0.329412, 0.870588, 1 )
 custom_colors/font_color = Color( 0.0117647, 0.329412, 0.870588, 1 )

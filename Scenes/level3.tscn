@@ -61,20 +61,47 @@ position = Vector2( -12, 103 )
 
 [node name="Enemy_1" parent="Node2D2" instance=ExtResource( 3 )]
 position = Vector2( 307, 117 )
+question = "Qual é a síslaba mais forte da palavra \"Música\"?"
+blue_text = "mú"
+yellow_text = "si"
+green_text = "ca"
+correct = "blue"
 
 [node name="Enemy_2" parent="Node2D2" instance=ExtResource( 3 )]
 position = Vector2( 645, 353 )
+question = "A Palavra \"Alecrim\" é uma?"
+blue_text = "Paroxítona"
+yellow_text = "Oxítona"
+green_text = "Proparoxítona"
+correct = "yellow"
 
 [node name="Enemy_3" parent="Node2D2" instance=ExtResource( 3 )]
 position = Vector2( 660, 508 )
+question = "Qual palavra é uma proparoxítona?"
+blue_text = "Mesa"
+yellow_text = "Computador"
+green_text = "Máquina"
+correct = "green"
 
 [node name="Enemy_4" parent="Node2D2" instance=ExtResource( 3 )]
 position = Vector2( 146, 304 )
+question = "Qual das palavras abaixo deveria ter sido acentudada?"
+blue_text = "\"comodo\", pois toda palavra proparoxítona de ser acentuada"
+yellow_text = "\"apartamento\", pois toda palavra paroxitona de ser acentuada"
+green_text = "\"cobertor\", pois toda palavra oxítona deve ser acentuada"
+correct = "blue"
 
 [node name="Enemy_5" parent="Node2D2" instance=ExtResource( 3 )]
 position = Vector2( 183, 512 )
+question = "Qual afirmativa está correta?"
+blue_text = "as palavras \"líquido\" e \"óculos\" são paroxítonas e não deveriam ser acentuadas"
+yellow_text = "as palavras \"líquido\" e \"óculos\" são proparoxítonas e, por isso, são acentuadas"
+green_text = "as palavras \"líquido\" e \"óculos\" são proparoxítonas e não deveriam ser acentuadas"
+correct = "yellow"
 
 [node name="Deodoro" parent="Node2D2" instance=ExtResource( 5 )]
 position = Vector2( 766, 451 )
+dialog_text = [ "Olá sou o mereshal Deodoro da Fonseca.", "Fui o primeiro presidente do Brasil na era de 1843 e 1847", "neste lugar onde nasceu o plano para proclamar a Republica!!!", "Você terá que derrotar todas as criaturas e abrir todos os baús.", "Volte quando tiver concluído os desafios!" ]
+question_text = [ "Hummm...", "Vejo que você conseguiu derrotar todas as criaturas!", "Parabéns!!", "Pegue esse livro, você irá aprender algo sobre mim!", "Depois de ler, volte aqui, que irei lhe fazer uma pergunta.", "Caso acerte, deixarei você passar!" ]
 
 [node name="Interface" parent="." instance=ExtResource( 4 )]

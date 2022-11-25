@@ -116,7 +116,7 @@ position = Vector2( -127.5, -53.75 )
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Terrain/YSort/Area2D2"]
 position = Vector2( 175, 194 )
 build_mode = 1
-polygon = PoolVector2Array( 264.5, -535.25, 262.5, -243.25, 274.5, -230.25, 415.5, -232.25, 420.5, -238.25, 418.5, -533.25 )
+polygon = PoolVector2Array( 265.5, -540.25, 262.5, -243.25, 274.5, -230.25, 415.5, -232.25, 420.5, -238.25, 417.5, -541.25 )
 
 [node name="Area2D3" type="StaticBody2D" parent="Terrain/YSort"]
 position = Vector2( -127.5, -53.75 )
@@ -124,7 +124,7 @@ position = Vector2( -127.5, -53.75 )
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Terrain/YSort/Area2D3"]
 position = Vector2( 175, 193 )
 build_mode = 1
-polygon = PoolVector2Array( 493.5, -540.25, 495.5, -279.25, 499.5, -270.25, 533.5, -268.25, 533.5, -198.25, 540.5, -192.25, 816.5, -193.25, 794.5, -534.25 )
+polygon = PoolVector2Array( 493.5, -540.25, 495.5, -279.25, 499.5, -270.25, 533.5, -268.25, 533.5, -198.25, 540.5, -192.25, 816.5, -193.25, 813.5, -543.25 )
 
 [node name="Area2D4" type="StaticBody2D" parent="Terrain/YSort"]
 position = Vector2( -127.5, -53.75 )
@@ -140,7 +140,7 @@ position = Vector2( -127.5, -53.75 )
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Terrain/YSort/Area2D6"]
 position = Vector2( 168, 194 )
 build_mode = 1
-polygon = PoolVector2Array( 89.5, -80.25, 82.5, -85.25, 83.5, -147.25, 87.5, -154.25, 306.5, -155.25, 310.5, -149.25, 311.5, -7.25, 310.5, 72.75, 121.5, 72.75, 119.5, -80.25 )
+polygon = PoolVector2Array( 84.5, -79.25, 79.5, -84.25, 80.5, -152.25, 85.5, -157.25, 306.5, -155.25, 310.5, -149.25, 311.5, -7.25, 311.5, 68.75, 305.5, 74.75, 123.5, 74.75, 118.5, 69.75, 118.5, -79.25 )
 
 [node name="Area2D8" type="StaticBody2D" parent="Terrain/YSort"]
 position = Vector2( -127.5, -53.75 )
@@ -148,7 +148,7 @@ position = Vector2( -127.5, -53.75 )
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Terrain/YSort/Area2D8"]
 position = Vector2( 168, 194 )
 build_mode = 1
-polygon = PoolVector2Array( 543.5, 117.75, 547.5, 112.75, 579.5, 112.75, 581.5, -115.25, 598.5, -115.25, 822.5, -118.25, 822.5, 272.75, 540.5, 274.75 )
+polygon = PoolVector2Array( 541.5, 116.75, 546.5, 112.75, 579.5, 112.75, 581.5, -115.25, 598.5, -115.25, 822.5, -118.25, 821.5, 275.75, 541.5, 275.75 )
 
 [node name="Area2D9" type="StaticBody2D" parent="Terrain/YSort"]
 position = Vector2( -127.5, -53.75 )
@@ -164,7 +164,7 @@ position = Vector2( -255, -107.5 )
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Terrain/YSort/Area2D10"]
 position = Vector2( 168, 194 )
 build_mode = 1
-polygon = PoolVector2Array( -591, 167.5, -401, 166.5, -404, 161.5, -404, 152.5, -404, 147.5, -398, 141.5, -393, 144.5, -390, 135.5, -384, 129.5, -377, 129.5, -369, 129.5, -367, 139.5, -364, 157.5, -366, 165.5, -339, 165.5, -332, 168.5, -328, 173.5, -328, 334.5, -590, 328.5 )
+polygon = PoolVector2Array( -589, 166.5, -401, 166.5, -404, 161.5, -404, 152.5, -404, 147.5, -398, 141.5, -393, 144.5, -390, 135.5, -384, 129.5, -377, 129.5, -369, 129.5, -367, 139.5, -364, 157.5, -366, 165.5, -339, 165.5, -332, 168.5, -328, 173.5, -328, 329.5, -590, 328.5 )
 
 [node name="Area2D11" type="StaticBody2D" parent="Terrain/YSort"]
 position = Vector2( -255, -107.5 )
@@ -254,7 +254,7 @@ collision_layer = 31
 
 [node name="Enemy" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( -49, -16 )
-question = "Qual palavra está correta?"
+question = "Qual palavra está escrita corretamente?"
 blue_text = "Paralelepipedo"
 yellow_text = "Paralelepipede"
 green_text = "Parepipedo"
@@ -262,37 +262,39 @@ correct = "blue"
 
 [node name="Enemy2" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( -198, 162 )
-question = "Qual palavra está correta?"
-blue_text = "Paralelepipedo"
-yellow_text = "Paralelepipede"
-green_text = "Parepipedo"
-correct = "blue"
+question = "As seguintes regras de acentuação são?"
+blue_text = "As palavras oxítonas terminadas em -ENS não são acentuadas."
+yellow_text = "As palavras oxítonas terminadas em -Z não são acentuadas."
+green_text = "As palavras oxítonas terminadas em -I nunca são acentuadas."
+correct = "yellow"
 
 [node name="Enemy3" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 248, -53 )
-question = "Qual palavra está correta?"
-blue_text = "Paralelepipedo"
-yellow_text = "Paralelepipede"
-green_text = "Parepipedo"
-correct = "blue"
+question = "Qual das palavras abaixo é oxítona?"
+blue_text = "Príncipe"
+yellow_text = "Rainha"
+green_text = "Jardim"
+correct = "green"
 
 [node name="Enemy4" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 443, 78 )
-question = "Qual palavra está correta?"
-blue_text = "Paralelepipedo"
-yellow_text = "Paralelepipede"
-green_text = "Parepipedo"
+question = "A palavra \"Maracujá\" é uma?"
+blue_text = "Oxítona"
+yellow_text = "Paroxítona"
+green_text = "Proparoxítona"
 correct = "blue"
 
 [node name="Enemy5" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 448, 326 )
-question = "Qual palavra está correta?"
-blue_text = "Paralelepipedo"
-yellow_text = "Paralelepipede"
-green_text = "Parepipedo"
-correct = "blue"
+question = "Qual silaba é mais forte na palavra \"Crochê\"?"
+blue_text = "Não tem"
+yellow_text = "chê"
+green_text = "cro"
+correct = "yellow"
 
 [node name="Tiradentes" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 503, -147 )
+dialog_text = [ "Olá sou Tiradentes.", "Lutava pela saparação de Minas Gerais a corte de Portugal", "no qual me fez ser executado pela coroa do Imperio.", "Você terá que derrotar todas as criaturas e abrir todos os baús.", "Volte quando tiver concluído os desafios!" ]
+question_text = [ "Hummm...", "Vejo que você conseguiu derrotar todas as criaturas!", "Parabéns!!", "Pegue esse livro, você irá aprender algo sobre mim!", "Depois de ler, volte aqui, que irei lhe fazer uma pergunta.", "Caso acerte, deixarei você passar!" ]
 
 [node name="Interface" parent="." instance=ExtResource( 3 )]
