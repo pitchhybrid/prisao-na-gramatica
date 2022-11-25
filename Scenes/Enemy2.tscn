@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://mystic_woods_free_v0.2/Scorpian/Scorpian-1.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=2]
 [ext_resource path="res://Interface/QuestionBox.tscn" type="PackedScene" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 23, 22 )
+[sub_resource type="CircleShape2D" id=4]
+radius = 17.0
 
 [sub_resource type="Animation" id=2]
 resource_name = "RESET"
@@ -20,6 +20,22 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "hit"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -63,11 +79,17 @@ tracks/2/keys = {
 "values": [ 3, 4, 5 ]
 }
 
-[node name="Enemy" type="Area2D"]
+[sub_resource type="CircleShape2D" id=6]
+radius = 74.0
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 17.1172
+
+[node name="Enemy" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -76,9 +98,24 @@ vframes = 3
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
+anims/hit = SubResource( 7 )
 anims/jump = SubResource( 3 )
 
 [node name="QuestionBox" parent="." instance=ExtResource( 3 )]
 
-[connection signal="body_entered" from="." to="." method="_on_Enemy_body_entered"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 6 )
+
+[node name="Dialog" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Dialog"]
+position = Vector2( -1, 1 )
+shape = SubResource( 5 )
+
 [connection signal="correct_answer" from="QuestionBox" to="." method="_on_QuestionBox_correct_answer"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Dialog" to="." method="_on_Dialog_body_entered"]
+[connection signal="body_exited" from="Dialog" to="." method="_on_Dialog_body_exited"]

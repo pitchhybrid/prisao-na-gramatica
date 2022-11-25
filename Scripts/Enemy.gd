@@ -67,3 +67,8 @@ func _on_Dialog_body_entered(body):
 func _on_Area2D_body_exited(body):
 	if body.name == "Player":
 		go = false
+
+
+func _on_Dialog_body_exited(body):
+	if body.name == "Player":
+		can_interact1 = false

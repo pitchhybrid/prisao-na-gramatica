@@ -60,16 +60,19 @@ position = Vector2( 4, -31 )
 position = Vector2( -12, 103 )
 
 [node name="Enemy_1" parent="Node2D2" instance=ExtResource( 3 )]
-position = Vector2( 274, 163 )
+position = Vector2( 307, 117 )
 
 [node name="Enemy_2" parent="Node2D2" instance=ExtResource( 3 )]
 position = Vector2( 645, 353 )
 
 [node name="Enemy_3" parent="Node2D2" instance=ExtResource( 3 )]
-position = Vector2( 438, 529 )
+position = Vector2( 660, 508 )
 
 [node name="Enemy_4" parent="Node2D2" instance=ExtResource( 3 )]
-position = Vector2( 97, 296 )
+position = Vector2( 146, 304 )
+
+[node name="Enemy_5" parent="Node2D2" instance=ExtResource( 3 )]
+position = Vector2( 183, 512 )
 
 [node name="Deodoro" parent="Node2D2" instance=ExtResource( 5 )]
 position = Vector2( 766, 451 )

@@ -250,6 +250,7 @@ polygon = PoolVector2Array( 640, 237.5, 640, 231.5, 644, 226.5, 640, 227.5, 640,
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 101, 200 )
+collision_layer = 31
 
 [node name="Enemy" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( -49, -16 )
@@ -277,6 +278,14 @@ correct = "blue"
 
 [node name="Enemy4" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 443, 78 )
+question = "Qual palavra está correta?"
+blue_text = "Paralelepipedo"
+yellow_text = "Paralelepipede"
+green_text = "Parepipedo"
+correct = "blue"
+
+[node name="Enemy5" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 448, 326 )
 question = "Qual palavra está correta?"
 blue_text = "Paralelepipedo"
 yellow_text = "Paralelepipede"

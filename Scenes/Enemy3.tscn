@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://mystic_woods_free_v0.2/LPC_house_interior/bat.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=2]
 [ext_resource path="res://Interface/QuestionBox.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=6]
-radius = 28.0179
+radius = 22.561
 
 [sub_resource type="Animation" id=7]
 resource_name = "RESET"
@@ -145,9 +145,14 @@ tracks/2/keys = {
 "values": [ 15, 16, 17, 18, 19, 20 ]
 }
 
-[node name="Enemy" type="Area2D"]
-collision_layer = 4
-collision_mask = 0
+[sub_resource type="CircleShape2D" id=11]
+radius = 55.0091
+
+[sub_resource type="CircleShape2D" id=12]
+radius = 23.0217
+
+[node name="Enemy" type="KinematicBody2D"]
+collision_mask = 29
 script = ExtResource( 2 )
 question = "Qual Palavra Está Escrita Corretamente?"
 blue_text = "Cabeçalho"
@@ -155,6 +160,7 @@ yellow_text = "Cabessalho"
 green_text = "Cabeçário"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8 )
 shape = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -171,5 +177,20 @@ anims/jump = SubResource( 10 )
 
 [node name="QuestionBox" parent="." instance=ExtResource( 3 )]
 
-[connection signal="body_entered" from="." to="." method="_on_Enemy_body_entered"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 8 )
+shape = SubResource( 11 )
+
+[node name="Dialog" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialog"]
+position = Vector2( 0, 8 )
+shape = SubResource( 12 )
+
 [connection signal="correct_answer" from="QuestionBox" to="." method="_on_QuestionBox_correct_answer"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Dialog" to="." method="_on_Dialog_body_entered"]
+[connection signal="body_exited" from="Dialog" to="." method="_on_Dialog_body_exited"]
