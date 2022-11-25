@@ -36,6 +36,6 @@ func _on_QuestionBox_correct_answer():
 	$Animation.play("hit")
 	Global.add_enemy(1)
 
-func _on_Enemy_1_body_entered(body):
+func _on_Enemy_body_entered(body):
 	if body.name == "Player":
 		can_interact1 = true

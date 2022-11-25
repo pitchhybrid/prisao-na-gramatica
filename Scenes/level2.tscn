@@ -283,7 +283,7 @@ yellow_text = "Paralelepipede"
 green_text = "Parepipedo"
 correct = "blue"
 
-[node name="KinematicBody2D" parent="YSort" instance=ExtResource( 5 )]
+[node name="Tiradentes" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 503, -147 )
 
 [node name="Interface" parent="." instance=ExtResource( 3 )]
