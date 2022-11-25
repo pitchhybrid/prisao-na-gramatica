@@ -39,3 +39,4 @@ func _on_Button_pressed():
 	instance.global_position = self.global_position + Vector2(20,10)
 	#$QuestionBox.show()
 	$CanvasLayer.queue_free()
+	Scene.goto_scene('res://Scenes/level2.tscn')
