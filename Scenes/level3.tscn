@@ -101,7 +101,7 @@ correct = "yellow"
 
 [node name="Deodoro" parent="Node2D2" instance=ExtResource( 5 )]
 position = Vector2( 766, 451 )
-dialog_text = [ "Olá sou o mereshal Deodoro da Fonseca.", "Fui o primeiro presidente do Brasil na era de 1843 e 1847", "neste lugar onde nasceu o plano para proclamar a Republica!!!", "Você terá que derrotar todas as criaturas e abrir todos os baús.", "Volte quando tiver concluído os desafios!" ]
+dialog_text = [ "Olá sou o Marechal Deodoro da Fonseca.", "Você terá que derrotar todas as criaturas.", "Volte quando tiver concluído os desafios!" ]
 question_text = [ "Hummm...", "Vejo que você conseguiu derrotar todas as criaturas!", "Parabéns!!", "Pegue esse livro, você irá aprender algo sobre mim!", "Depois de ler, volte aqui, que irei lhe fazer uma pergunta.", "Caso acerte, deixarei você passar!" ]
 
 [node name="Interface" parent="." instance=ExtResource( 4 )]

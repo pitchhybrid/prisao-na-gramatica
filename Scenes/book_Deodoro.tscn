@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Enemy_book.tscn" type="PackedScene" id=1]
+
+[node name="book_Deodoro" instance=ExtResource( 1 )]
+dialog_text = [ "\"Deodoro da Fonseca foi um militar e político tido como uma das personalidades mais importantes do Brasil no final do século XIX.", "Enquanto militar, ficou marcado por uma rápida ascensão na hierarquia, em especial, durante a Guerra do Paraguai.", "Na década de 1880, foi promovido à patente de marechal de campo.", "Na política, Deodoro da Fonseca foi um dos personagens que levaram à queda da monarquia no Brasil...", "e à proclamação da república, em 15 de novembro de 1889. Apesar de ser um monarquista, o militar foi convencido a apoiar o golpe.", "Com a queda da monarquia, foi nomeado para a presidência do país em 1889.\"" ]

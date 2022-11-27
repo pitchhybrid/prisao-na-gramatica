@@ -69,8 +69,13 @@ radius = 17.0
 collision_layer = 16
 collision_mask = 0
 script = ExtResource( 2 )
-dialog_text = [ "Olá, sou D. Pedro I", "Fui Rei entre 1822 e 1831, reinava como um rei Absolutista!", "Para abrir a porta e passar para a próxima fase...", "Você terá que derrotar todas as criaturas e abrir todos os baús.", "Volte quando tiver concluído os desafios!" ]
+dialog_text = [ "Olá, sou D. Pedro I", "Fui Rei entre 1822 e 1831, reinava como um rei Absolutista!", "Para abrir a porta e passar para a próxima fase...", "Você terá que derrotar todas as criaturas.", "Volte quando tiver concluído os desafios!" ]
 question_text = [ "Hummm...", "Vejo que você conseguiu derrotar todas as criaturas!", "Parabéns!!", "Pegue esse livro, você irá aprender algo sobre mim!", "Depois de ler, volte aqui, que irei lhe fazer uma pergunta.", "Caso acerte, deixarei você passar!" ]
+question = "Qual foi a grande marca de D. Pedro I durante seu reinado sobre o Brasil?"
+blue_text = "Democracia"
+yellow_text = "Autoritarismo"
+green_text = "Totalitarismo"
+correct = "yellow"
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.7, 0.7 )
@@ -119,4 +124,5 @@ text = "Receber Livro!"
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
+[connection signal="correct_answer" from="QuestionBox" to="." method="_on_QuestionBox_correct_answer"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]

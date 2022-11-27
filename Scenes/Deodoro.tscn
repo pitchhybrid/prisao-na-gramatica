@@ -55,6 +55,11 @@ position = Vector2( -5, 0 )
 script = ExtResource( 3 )
 dialog_text = [ "a", "a", "a", "a", "a" ]
 question_text = [ "a", "a", "a", "a", "a" ]
+question = "O primeiro presidente do Brasil foi?"
+blue_text = "Marechal Floriano de Peixoto"
+yellow_text = "Prudente de Morais"
+green_text = "Marechal Deodoro da Fonseca"
+correct = "green"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 5, 8.375 )
@@ -65,7 +70,7 @@ position = Vector2( 5, 0 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 10 )
 animation = "idle"
-frame = 3
+frame = 1
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -91,10 +96,13 @@ margin_right = 242.0
 margin_bottom = 105.0
 
 [node name="Button" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+pause_mode = 2
 margin_right = 100.0
 margin_bottom = 20.0
+action_mode = 0
 text = "Receber livro!"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="correct_answer" from="QuestionBox" to="." method="_on_QuestionBox_correct_answer"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]

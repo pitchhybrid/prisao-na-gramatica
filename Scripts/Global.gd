@@ -1,5 +1,7 @@
 extends Node
 
+var level_pass: bool = false
+var final_quest: bool = false
 var pontos = 300
 var score: int = 0
 
