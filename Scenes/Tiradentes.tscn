@@ -47,8 +47,8 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 6, 6.5 )
 
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 14.5, 17.5 )
+[sub_resource type="CircleShape2D" id=11]
+radius = 16.5076
 
 [node name="Tiradentes" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -60,7 +60,7 @@ position = Vector2( 0, 1 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 9 )
 animation = "idle"
-frame = 3
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -76,6 +76,7 @@ shape = SubResource( 11 )
 [node name="QuestionBox" parent="." instance=ExtResource( 3 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
 visible = false
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
@@ -95,4 +96,5 @@ text = "Receber livro!"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="correct_answer" from="QuestionBox" to="." method="_on_QuestionBox_correct_answer"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]

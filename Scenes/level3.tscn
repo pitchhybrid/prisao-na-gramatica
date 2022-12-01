@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://mystic_woods_free_v0.2/LPC_house_interior/preview.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Enemy3.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Interface/Interface.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Deodoro.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/level3.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 22, 33 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -57,10 +62,10 @@ polygon = PoolVector2Array( 866.5, 568.5, 866.5, 512.5, 874.5, 506.5, 877.5, 505
 position = Vector2( 4, -31 )
 
 [node name="Player" parent="Node2D2" instance=ExtResource( 1 )]
-position = Vector2( -12, 103 )
+position = Vector2( 839, 505 )
 
 [node name="Enemy_1" parent="Node2D2" instance=ExtResource( 3 )]
-position = Vector2( 307, 117 )
+position = Vector2( 44, 121 )
 question = "Qual é a síslaba mais forte da palavra \"Música\"?"
 blue_text = "mú"
 yellow_text = "si"
@@ -68,7 +73,7 @@ green_text = "ca"
 correct = "blue"
 
 [node name="Enemy_2" parent="Node2D2" instance=ExtResource( 3 )]
-position = Vector2( 645, 353 )
+position = Vector2( 153, 301 )
 question = "A Palavra \"Alecrim\" é uma?"
 blue_text = "Paroxítona"
 yellow_text = "Oxítona"
@@ -76,7 +81,7 @@ green_text = "Proparoxítona"
 correct = "yellow"
 
 [node name="Enemy_3" parent="Node2D2" instance=ExtResource( 3 )]
-position = Vector2( 660, 508 )
+position = Vector2( 573, 524 )
 question = "Qual palavra é uma proparoxítona?"
 blue_text = "Mesa"
 yellow_text = "Computador"
@@ -84,7 +89,7 @@ green_text = "Máquina"
 correct = "green"
 
 [node name="Enemy_4" parent="Node2D2" instance=ExtResource( 3 )]
-position = Vector2( 146, 304 )
+position = Vector2( 292, 120 )
 question = "Qual das palavras abaixo deveria ter sido acentudada?"
 blue_text = "\"comodo\", pois toda palavra proparoxítona de ser acentuada"
 yellow_text = "\"apartamento\", pois toda palavra paroxitona de ser acentuada"
@@ -105,3 +110,11 @@ dialog_text = [ "Olá sou o Marechal Deodoro da Fonseca.", "Você terá que derr
 question_text = [ "Hummm...", "Vejo que você conseguiu derrotar todas as criaturas!", "Parabéns!!", "Pegue esse livro, você irá aprender algo sobre mim!", "Depois de ler, volte aqui, que irei lhe fazer uma pergunta.", "Caso acerte, deixarei você passar!" ]
 
 [node name="Interface" parent="." instance=ExtResource( 4 )]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 896, 497 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

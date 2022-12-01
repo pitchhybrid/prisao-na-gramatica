@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Enemy_book.tscn" type="PackedScene" id=1]
+
+[node name="book_Deodoro" instance=ExtResource( 1 )]
+dialog_text = [ "\"Fui acusado de conspiração pelas autoridades da Coroa Portuguesa e foi morto no dia 21 de abril de 1792.", "Além do interesse pela atividade política, Joaquim José da Silva Xavier exerceu diversas atividades profissionais", "dentre as quais a de dentista amador, que acabou lhe rendendo o apelido de Tiradentes.", " interessados em uma rebelião contra o governo local da Capitania de Minas Gerais", "à época representado pelo Visconde de Barbacena, que  decidi integrar a conspiração." ]
+
+[node name="Collision" parent="dialog" index="0"]
+position = Vector2( -2, 0 )

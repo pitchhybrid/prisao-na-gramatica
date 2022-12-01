@@ -24,8 +24,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=9]
 resource_name = "hit"
-length = 0.6
-loop = true
+length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
@@ -57,10 +56,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 7, 8, 9, 10, 11, 12 ]
+"values": [ 8, 7 ]
 }
 
 [sub_resource type="Animation" id=8]

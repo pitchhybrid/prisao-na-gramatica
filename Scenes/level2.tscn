@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://mystic_woods_free_v0.2/DesertTileset16x16/Tileset16x16/Mockup3.png" type="Texture" id=1]
 [ext_resource path="res://mystic_woods_free_v0.2/DesertTileset16x16/Tileset16x16/DesertTilemapBlankBackground.png" type="Texture" id=2]
 [ext_resource path="res://Interface/Interface.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Tiradentes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/level2.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/Enemy2.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -73,7 +74,11 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 1/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 37, 10 )
+
 [node name="Level2" type="Node2D"]
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 600.0, -225.0 ],
 "_edit_vertical_guides_": [ 800.0, -300.0 ]
@@ -249,7 +254,7 @@ polygon = PoolVector2Array( 640, 237.5, 640, 231.5, 644, 226.5, 640, 227.5, 640,
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 101, 200 )
+position = Vector2( 631, -12 )
 collision_layer = 31
 
 [node name="Enemy" parent="YSort" instance=ExtResource( 9 )]
@@ -293,8 +298,21 @@ green_text = "cro"
 correct = "yellow"
 
 [node name="Tiradentes" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 503, -147 )
+position = Vector2( 503, -132 )
 dialog_text = [ "Olá sou Tiradentes.", "Lutava pela saparação de Minas Gerais a corte de Portugal", "no qual me fez ser executado pela coroa do Imperio.", "Você terá que derrotar todas as criaturas e abrir todos os baús.", "Volte quando tiver concluído os desafios!" ]
 question_text = [ "Hummm...", "Vejo que você conseguiu derrotar todas as criaturas!", "Parabéns!!", "Pegue esse livro, você irá aprender algo sobre mim!", "Depois de ler, volte aqui, que irei lhe fazer uma pergunta.", "Caso acerte, deixarei você passar!" ]
+question = "a"
+blue_text = "a"
+yellow_text = "a"
+green_text = "a"
+correct = "blue"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 505, -204 )
+shape = SubResource( 5 )
 
 [node name="Interface" parent="." instance=ExtResource( 3 )]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

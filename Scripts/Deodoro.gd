@@ -35,7 +35,6 @@ func _physics_process(_delta):
 		Global.level_pass = true
 	elif Input.is_action_just_pressed("ui_accept") and can_interact1 and Global.level_pass:
 		can_interact1 = false
-		self.global_position += Vector2(30,0)
 
 func _ready():
 	$Deodoro.play("idle")
@@ -50,7 +49,7 @@ func _on_Button_pressed():
 	get_tree().paused = false
 	var instance = book_deodoro.instance()
 	get_parent().get_parent().add_child(instance)
-	instance.global_position = self.global_position + Vector2(20,10)
+	instance.global_position = self.global_position + Vector2(30,20)
 	#$QuestionBox.show()
 	$CanvasLayer.queue_free()
 	
@@ -68,3 +67,4 @@ func _on_Area2D_body_exited(body):
 func _on_QuestionBox_correct_answer():
 	Global.add_score(Global.pontos)
 	Global.pontos = 300
+	self.global_position += Vector2(30,0)
